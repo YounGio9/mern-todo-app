@@ -5,11 +5,7 @@ import {
     faCircleCheck,
     faTrashCan,
     faPen,
-    faPlusCircle,
-    faCheckCircle,
-    faTimesCircle,
-    faCheck,
-    faTrash,
+
 } from '@fortawesome/free-solid-svg-icons'
 
 function ListTodo() {
@@ -39,7 +35,7 @@ function ListTodo() {
         setToDo(toDo.filter(task => task.id!== id));
     }
     //
-    const editTask = (id, title) => {
+    /*const editTask = (id, title) => {
         // Modification de la tâche à la liste
         setToDo(toDo.map(task => {
             if (task.id === id) {
@@ -47,7 +43,7 @@ function ListTodo() {
             }
             return task;
         }));
-    }
+    }*/
 
     // Chekbox tâche en cour ou terminé
     const chekDone = (id) => {
