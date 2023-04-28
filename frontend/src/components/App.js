@@ -1,6 +1,5 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import ListTodo from "./ListTodo";
 import '../styles/App.css'
 
