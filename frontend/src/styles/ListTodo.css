@@ -35,4 +35,31 @@
     opacity: 0.3;
 
 }
+.taskBg div {
+    display: flex;
+    align-items: center;
+}
+.taskBg .icons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    width: auto;
+    display: inline-block;
+}
 
+.taskBg .icons span {
+    display: inline-block;
+    margin: 0px 10px 0 10px;
+    cursor: pointer;
+    color: #2a5e1c;
+}
+.taskBg .icons span:hover {
+    color: darkblue;
+}
+.taskBg .taskText{
+    flex: 1;
+}
+.mr-20 {
+    margin-right: 20px;
+}
