@@ -7,6 +7,7 @@ import {
     faPen,
 
 } from '@fortawesome/free-solid-svg-icons'
+import imgTodo from '../assets/Checklis.png';
 
 function ListTodo() {
     // State d'ajout de tâche à la list
@@ -85,6 +86,7 @@ function ListTodo() {
                 <div className="col-md-12 text-xl-center ">
                     <br/><br/>
                     <h1> Todo-app</h1>
+                    <img src={imgTodo} alt="Todoimg" className="img-fluid" />
                     <br/><br/>
                     {/*update task*/}
                     { updateTask && updateTask ? (
