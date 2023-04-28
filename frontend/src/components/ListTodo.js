@@ -12,8 +12,7 @@ import imgTodo from '../assets/Checklis.png';
 function ListTodo() {
     // State d'ajout de tâche à la list
     const [toDo, setToDo] = useState([
-        { "id":1, "title": "Tâche 1", "Statut": false},
-        { "id":2, "title": "Tâche 2", "Statut": false}
+
     ]); // variable des tâches avec leur paramètre
     //
     const [newTask, setNewTask] = useState(''); // variable temporaire pour stocker une tâche
@@ -71,7 +70,6 @@ function ListTodo() {
     }
 
     // Modifier la tâche
-    //////////////////////////////////////////
     const updateTaskValue = () => {
         let filterRecords = [...toDo].filter( task=>task.id !== updateTask.id);
         let updatedObject = [...filterRecords, updateTask];
@@ -85,7 +83,7 @@ function ListTodo() {
             <div className="row">
                 <div className="col-md-12 text-xl-center ">
                     <br/><br/>
-                    <h1> Todo-app</h1>
+                    <h1> Todo-app✅</h1>
                     <img src={imgTodo} alt="Todoimg" className="img-fluid" />
                     <br/><br/>
                     {/*update task*/}
@@ -138,7 +136,7 @@ function ListTodo() {
 
 
 
-                    { toDo && toDo.length ? '': 'Aucune tâche disponible'}
+                    { toDo && toDo.length ? '': 'Aucune tâche disponible pour l\'instant 👻'}
                     {
                         toDo && toDo
                             .sort((a, b) => a.id > b.id ? 1 : -1)
