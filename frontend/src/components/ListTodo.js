@@ -83,7 +83,7 @@ function ListTodo() {
             <div className="row">
                 <div className="col-md-12 text-xl-center ">
                     <br/><br/>
-                    <h1> Todo-app✅</h1>
+                    <h1> Todo-app</h1>
                     <img src={imgTodo} alt="Todoimg" className="img-fluid" />
                     <br/><br/>
                     {/*update task*/}
@@ -133,10 +133,7 @@ function ListTodo() {
     <br/>
                         </>
                     )}
-
-
-
-                    { toDo && toDo.length ? '': 'Aucune tâche disponible pour l\'instant 👻'}
+                    { toDo && toDo.length ? '': 'Aucune tâche disponible 👻 '}
                     {
                         toDo && toDo
                             .sort((a, b) => a.id > b.id ? 1 : -1)
