@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/mern-todo-app/static/css/main.8e847ed0.css",
-    "main.js": "/mern-todo-app/static/js/main.c0917a79.js",
+    "main.js": "/mern-todo-app/static/js/main.7bd2267d.js",
     "static/js/787.cda612ba.chunk.js": "/mern-todo-app/static/js/787.cda612ba.chunk.js",
     "static/media/Checklis.png": "/mern-todo-app/static/media/Checklis.7174ac6b23429219e680.png",
     "index.html": "/mern-todo-app/index.html",
     "main.8e847ed0.css.map": "/mern-todo-app/static/css/main.8e847ed0.css.map",
-    "main.c0917a79.js.map": "/mern-todo-app/static/js/main.c0917a79.js.map",
+    "main.7bd2267d.js.map": "/mern-todo-app/static/js/main.7bd2267d.js.map",
     "787.cda612ba.chunk.js.map": "/mern-todo-app/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8e847ed0.css",
-    "static/js/main.c0917a79.js"
+    "static/js/main.7bd2267d.js"
   ]
 }
