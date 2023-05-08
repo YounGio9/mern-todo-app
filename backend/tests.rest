@@ -1,0 +1,28 @@
+POST http://localhost:8001/todos
+Content-Type: application/json
+
+{
+    "name": "Payer narcos",
+    "completed": false
+}
+
+###
+
+GET  http://localhost:8001/todos
+Content-Type: application/json
+
+###
+
+GET  http://localhost:8001/todos/64597bb506da93ffa41bfdd
+
+
+### 
+PUT http://localhost:8001/todos/64597e31e155997d9f8e3be2
+Content-Type: application/json
+
+{
+    "name": "Payer ferrari",
+    "completed": false
+
+}
+

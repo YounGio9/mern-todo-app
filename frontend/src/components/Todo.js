@@ -9,9 +9,9 @@ import {
 function Todo({ title, Statut, id, idx, toDo, setToDo, setUpdateTask }) {
 
       // Chekbox tâche en cour ou terminé
-   const chekDone = (idx) => {
+   const chekDone = (id) => {
       let newTasks = toDo.map((task) => {
-         if (task.id === idx) {
+         if (task.id === id) {
             return { ...task, Statut: !Statut }
          }
          return task
