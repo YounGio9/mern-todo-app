@@ -26,3 +26,6 @@ Content-Type: application/json
 
 }
 
+###
+DELETE http://localhost:8001/todos/64597e31e155997d9f8e3be2
+

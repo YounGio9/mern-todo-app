@@ -16,6 +16,7 @@ todoRouter.get('/todos', async (req, res, next) => {
    })
 })
 
+
 // GET A TODO BY HIS ID || RETRIEVE A UNIQUE TODO
 
 todoRouter.get('/todos/:id', async (req, res) => {
@@ -35,6 +36,7 @@ todoRouter.get('/todos/:id', async (req, res) => {
          res.json({ sucess: false, error: "Todo doesn't exist" })
       })
 })
+
 
 // CREATE A NEW TODO
 
@@ -77,13 +79,27 @@ todoRouter.post('/todos', async (req, res) => {
    }
 })
 
+
+// UPDATE A TODO 
+
 todoRouter.put('/todos/:id', async (req, res) => {
+    const {id} = req.params
    const { name, completed } = req.body
 
    const update = {}
    if (name != null) update.name = name
    if (completed != null) update.completed = completed
 
+
+   const t = await Todo.findOne({_id: id })
+
+   if(t == null) {
+        return res.json({
+           success: false,
+           status: 200,
+           message: 'Todo with this id doesn\'t exists',
+        })
+   }
 
    await Todo.findOneAndUpdate({ _id: req.params.id }, update, {
       new: true,
@@ -103,5 +119,39 @@ todoRouter.put('/todos/:id', async (req, res) => {
          })
       })
 })
+
+
+// DELETE A TODO 
+
+todoRouter.delete('/todos/:id', async (req, res) => {
+    const {id} = req.params
+
+    const t = await Todo.findOne({_id: id })
+
+   if(t == null) {
+        return res.json({
+           success: true,
+           status: 200,
+           message: 'Todo with this id doesn\'t exists',
+        })
+   }
+
+   await Todo.findOneAndDelete({_id: id}).then(data => {
+        res.json({
+            success: true,
+            message: 'Todo successfully deleted'
+        })
+   }).catch(err => {
+        console.log(err)
+        res.json({
+            success: false,
+            message: 'Bad request',
+        })
+   })
+
+
+})
+
+
 
 module.exports = todoRouter

@@ -11,15 +11,13 @@ app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-// conection to MongoDB
+// connection to MongoDB
 connect()
 
 app.use('/', todoRouter)
 
 app.get('/', (req, res) => {
-   res.json({
-      message: 'Welcome back to your favourite backend framework',
-   })
+   res.send('Welcome back to your favourite backend framework')
 })
 
 app.listen(PORT, () => {
